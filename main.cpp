@@ -47,7 +47,7 @@ void train(size_t epoch, Net& model, torch::Device device, DataLoader& data_load
 		  torch::optim::Optimizer& optimizer, size_t dataset_size) {
   model.train();
   size_t batch_idx = 0;
-  for (auto& batch : data_loader) {
+  for (const auto& batch : data_loader) {
 	auto data = batch.data.to(device), targets = batch.target.to(device);
 	optimizer.zero_grad();
 	auto output = model.forward(data);
