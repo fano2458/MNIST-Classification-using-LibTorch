@@ -1,4 +1,5 @@
 #include <torch/torch.h>
+#include <chrono>
 
 
 const char* kDataRoot = "./data";
@@ -127,6 +128,12 @@ auto main() -> int {
 
   for (size_t epoch = 1; epoch <= kNumberOfEpochs; ++epoch) {
 	train(epoch, model, device, *train_loader, optimizer, train_dataset_size);
+    auto start_time = std::chrono::high_resolution_clock::now();
 	test(model, device, *test_loader, test_dataset_size);
+    auto end_time = std::chrono::high_resolution_clock::now();
+    auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
+    double elapsed_seconds = elapsed_ms / 1000.0;
+
+    std::printf("Epoch %ld finished. Time taken: %.2f seconds\n", epoch, elapsed_seconds);
   }
 }

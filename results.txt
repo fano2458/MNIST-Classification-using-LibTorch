@@ -1,0 +1,2 @@
+C++ : Accuracy = 99.1%, Inference = 0.08 sec
+Python : Accuracy = 98.9%, Inference = 0.85 sec
