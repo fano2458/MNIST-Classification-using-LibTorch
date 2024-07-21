@@ -6,7 +6,7 @@ This repository compares implementations of a custom Convolutional Neural Networ
 
 MNIST Dataset:
 
-The MNIST dataset is a widely used benchmark for image classification tasks. It consists of 70,000 images of handwritten digits (0-9) for training and 10,000 images for testing.
+The MNIST dataset is a widely used benchmark for image classification tasks. It consists of 60,000 images of handwritten digits (0-9) for training and 10,000 images for testing.
 
 Model Architecture:
 
@@ -37,11 +37,3 @@ Run the code:
     C++: Compile and run the C++ code following the instructions for your specific compiler and Torch setup.
 
 Note: Training times may vary depending on your hardware.
-
-Further Exploration:
-
-    Experiment with different hyperparameters (learning rate, batch size, etc.) to improve performance.
-    Try different CNN architectures and compare their accuracy.
-    Explore techniques for data augmentation to improve model generalization.
-
-This repository provides a starting point for implementing a custom CNN model for MNIST handwritten digit recognition. Feel free to modify and extend the code for further exploration and learning.
